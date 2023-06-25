@@ -1,0 +1,466 @@
+@import "./_settings.scss";
+
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+button {
+  border: 1px solid black;
+  background-color: #000000;
+  color: whitesmoke;
+  width: 70%;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 25px;
+  height: 3rem;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid grey;
+    cursor: pointer;
+  }
+}
+
+.btn-disabled {
+  border: none;
+  background-color: #f5f5f5a9;
+  color: whitesmoke;
+
+  &:hover {
+    background-color: #f5f5f5a9;
+    color: whitesmoke;
+    border: none;
+    cursor: inherit;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(117, 117, 119, 0.5);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: hidden;
+}
+
+.header {
+  width: 100vw;
+  color: whitesmoke; //as no font color specified
+  height: 35vh;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: $font-primary;
+  position: fixed;
+  width: 100vw;
+  padding: 5px;
+  height: 2rem;
+  font-size: 12px;
+  color: whitesmoke;
+  z-index: 10;
+}
+
+.header-section div {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.header-section h5 {
+  align-self: center;
+  font-weight: 400;
+  margin: 0;
+  font-size: 14px;
+  padding-right: 17px;
+  &:hover {
+    color: grey;
+  }
+}
+
+.header-detail {
+  display: flex;
+  margin: 1rem;
+  min-width: 13%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-detail img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+.header .overlay {
+  height: calc(100% - 2rem);
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  position: absolute;
+  top: 2rem;
+  z-index: 2;
+}
+
+.header .image {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  max-width: 25%;
+  z-index: 3;
+}
+
+.header .image img {
+  max-width: 100%;
+}
+
+.Store {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: 75%;
+  width: 85%;
+  margin: auto;
+  margin-top: 20%;
+  overflow-y: scroll;
+}
+
+.store-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  background-color: $green;
+  background-repeat: no-repeat;
+  background-size: 10rem;
+  background-position: right bottom;
+  width: 45%;
+  height: 17rem;
+  padding: 1rem;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  height: 90%;
+  max-width: 50%;
+}
+
+.card .card-image img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.card .card-details {
+  font-size: 12px;
+  padding: 1rem;
+  height: 90%;
+  max-width: 50%;
+}
+
+.card .card-details h2 {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.card .card-details p {
+  color: $font-secondary;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card .card-details .card-value {
+  display: flex;
+  font-weight: 600;
+  height: 7%;
+  align-items: center;
+  justify-items: flex-start;
+}
+
+.card .card-details .card-value img {
+  max-height: 100%;
+  margin-right: 0.5rem;
+}
+
+.card .card-details .card-value p {
+  margin: 0;
+}
+
+.Checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $green;
+  min-width: 100%;
+  min-height: 55%;
+  margin-top: 34vh;
+}
+
+.Checkout button {
+  width: 20%;
+  margin-left: 6%;
+  height: 3.5rem;
+  align-self: flex-start;
+}
+
+.Checkout span {
+  display: flex;
+  width: 20%;
+  margin-left: 6%;
+  align-self: flex-start;
+  color: $font-secondary;
+  font-size: 18px;
+}
+
+.Checkout span h4 {
+  margin: 0;
+  margin-left: 1rem;
+  font-weight: 600;
+  color: $font-primary;
+}
+
+.games {
+  min-width: 90%;
+  max-height: 25rem;
+  overflow-y: scroll;
+}
+
+.games .separator {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.games .showGame {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.games .showGame .gameDetails {
+  max-width: 40%;
+  max-height: 5rem;
+}
+
+.games .showGame .gameDetails {
+  max-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 10%;
+  max-width: 40%;
+}
+
+.games .showGame .gameDetails div {
+  margin-left: 1rem;
+}
+
+.games .showGame .gameDetails div h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.games .showGame .gameDetails div span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 3rem;
+}
+
+.games .showGame .gameDetails div img {
+  height: 1rem;
+  margin-right: 1rem;
+}
+
+.games .showGame .gameDetails #gameImage {
+  max-width: 3rem;
+  max-height: 4rem;
+}
+
+.games .showGame .bin:hover {
+  cursor: pointer;
+}
+
+.games .showGame .bin img {
+  max-width: 1.5rem;
+}
+
+.cart {
+  background-color: $green;
+  min-height: calc(100% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 30%;
+  position: absolute;
+  border-left: 2px solid black;
+  transform: translateX(0%);
+  transition: transform 0.5s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  z-index: 300;
+}
+
+.closed {
+  transform: translateX(120%);
+}
+
+.cart .games {
+  font-size: 12px;
+  max-height: 25rem;
+  min-height: 10rem;
+  overflow-y: auto;
+}
+
+.cart .games .showGame .gameDetails {
+  max-width: 90%;
+}
+
+.cart .games .showGame .gameDetails div {
+  margin-left: 2rem;
+  width: 70%;
+}
+
+.cart h2 {
+  color: $font-secondary;
+}
+
+.cart #cart-heading {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart #cart-close {
+  font-size: 20px;
+  width: 30px;
+  &:hover {
+    color: grey;
+  }
+  &:focus {
+    color: inherit;
+  }
+}
+
+.cart span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 640px) {
+  .App {
+    overflow-x: hidden;
+  }
+  .header-section {
+    font-size: 10px;
+  }
+
+  .header .image {
+    max-width: 65%;
+  }
+
+  .header-detail {
+    margin: 0.5rem;
+    min-width: 10%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    width: 100%;
+  }
+
+  .card .card-image {
+    height: 60%;
+    max-width: 10rem;
+  }
+
+  .card .card-image img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  .card .card-details {
+    height: 40%;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .Store {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    max-height: fit-content;
+  }
+
+  .store-row {
+    flex-direction: column;
+  }
+
+  .Checkout button {
+    width: 50%;
+    height: 3rem;
+  }
+
+  .games {
+    font-size: 12px;
+  }
+
+  .games .showGame .gameDetails {
+    max-width: 90%;
+  }
+
+  .games .showGame .gameDetails div {
+    margin-left: 2rem;
+    width: 70%;
+  }
+}
